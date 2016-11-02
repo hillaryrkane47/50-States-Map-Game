@@ -1,0 +1,60 @@
+html {
+  background: url('../img/worn-parchment-background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  padding: 30px 20px 20px 20px;
+
+}
+#svg-content {
+  display: inline-block;
+  position: relative;
+ margin:  0 auto;
+}
+
+.us_map{
+  height:337px;
+  width:600px;
+  border-color: 1px solid black;
+  position: absolute;
+  top:  50%;
+  left: 50%;
+}
+
+.state{
+  cursor:pointer;
+  fill:#a8e3e0;
+  opacity:.25;
+  transition:all .2s;
+  border-color: 1px solid black;
+
+}
+path{
+  stroke: black;
+}
+.state:hover{
+  opacity:1;
+}
+
+.enabled{
+  /* fill:#A8E3E0; */
+}
+
+[data-tooltip]{
+  position:relative;
+}
+
+[data-tooltip]:hover:before{
+  content:attr(data-tooltip);
+  display:block;
+  position:absolute;
+}
+
+
+
+
+
