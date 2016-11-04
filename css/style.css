@@ -1,60 +1,63 @@
-html {
-  background: url('../img/worn-parchment-background.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
-body {
-  padding: 30px 20px 20px 20px;
+.timer-wrapper {
+  display: block;
+  float: right;
 
 }
-#svg-content {
-  display: inline-block;
-  position: relative;
- margin:  0 auto;
+
+.time-left {
+  margin: 20px;
+  font-size: 3em;
+  font-family: courier;
+  margin: 0 5px 0;
 }
 
-.us_map{
-  height:337px;
-  width:600px;
-  border-color: 1px solid black;
+
+.thing {
   position: absolute;
-  top:  50%;
-  left: 50%;
+  top:  0;
+  left:  0;
+  font-size:  5vw;
+  color:  papayawhip;
 }
 
-.state{
-  cursor:pointer;
-  fill:#a8e3e0;
-  opacity:.25;
-  transition:all .2s;
-  border-color: 1px solid black;
-
-}
-path{
-  stroke: black;
-}
-.state:hover{
-  opacity:1;
-}
-
-.enabled{
-  /* fill:#A8E3E0; */
+button {
+  display: inline-block;
+  margin: 0 2px 0;
+  font-size: 2em;
+  font-family: courier;
+  color: white;
+  background-color: black;
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  cursor: pointer;
 }
 
-[data-tooltip]{
-  position:relative;
+button:focus {
+  outline: none;
 }
 
-[data-tooltip]:hover:before{
-  content:attr(data-tooltip);
-  display:block;
-  position:absolute;
+ Map Hover Styles
+
+.mapContainer a {
+  cursor: pointer;
 }
 
+path, polygon {
+  -webkit-transition: fill .25s ease-out;
+  -moz-transition: fill .25s ease-out;
+  transition: fill .25s ease-out;
+}
 
+.mapContainer a:hover path, .mapContainer a:focus path, .mapContainer a:active path, .mapContainer a:hover polygon, .mapContainer a:focus polygon, .mapContainer a:active polygon {
+  fill: #1A81A2;
+}
 
+.stateHover path {
+  fill: #1A81A2;
+}
 
 
