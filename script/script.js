@@ -50,12 +50,6 @@ var statesArr = [
     ansW : "Nope, sorry dood."
   },
   {
-    name : "District of Columbia",
-    abbrv : ".DC",
-    ansR : "Yee Yee!",
-    ansW : "Nope, sorry dood."
-  },
-  {
     name : "Florida",
     abbrv : ".FL",
     ansR : "Yee Yee!",
@@ -219,7 +213,7 @@ var statesArr = [
   },
   {
     name : "Oklahoma",
-    abbrv : ".OR",
+    abbrv : ".OK",
     ansR : "Yee Yee!",
     ansW : "Nope, sorry dood."
   },
@@ -303,7 +297,6 @@ var statesArr = [
   },
 ];
 
-
 var questions = {
   questionA: 'Where is Alaska?',
   questionB: 'Where is Alaska?',
@@ -319,63 +312,90 @@ var state = $('.state');
 var thing = $('.thing');
 
 //set active state when clicked
-
   var mapLink = $('.mapContainer a');
   $(mapLink).click(function() {
     $('.mapContainer a path').css('fill', '');
-    $(this).find('path').css('fill', '#1A81A2');
+    $(this).find('path').css('fill', '#33D7FF');
     // unbind not working idk why - trying to remove fill when state is clicked a second time
     $('.mapContainer a path').unbind('click');
   });
 
-// game magic
+// game magic yeeeeyeee
 
 // randomly display state name
 var chooseState = function() {
   var randomStateNum = Math.floor(Math.random() * 50)
-  var oneState = statesArr[randomStateNum].name;
+  oneState = statesArr[randomStateNum].name;
     // console.log(oneState)
-  $('.thing').text(oneState);
+  $('.random-state').text(oneState);
+  return oneState;
 }
-chooseState();
+
 
 // making sure state name is tied to state area
 state.on('click', function() {
   //get me state that was clicked on
   var abbrv = $(this).data('filter');
  //go through the entire array of states objects
-  $.each(statesArr, function(key, value){
+  $.each(statesArr, function(index, value){
 //match abbrv with the same state object
       if (abbrv === value.abbrv){
         $(this).map(function(x, y){
-          // console.log(y.name)
-      var clickState = y.name;
+          var clickState = y.name;
+          console.log(clickState)
+          if (clickState === oneState) {
+            $(".decider").text(y.ansR);
+            $(".decider").addClass('gotItRight');
+            function createStar(){
+              var star = $('<div class="starry"></div>')
+              $('#starry_div').prepend(star);
+              star.css("left", Math.random() * window.innerWidth);
+            };
+            for (var i=0; i<10; i++) {
+              createStar();
+            };
+            setTimeout(chooseState, 2000);
+            setTimeout(function(){
+              $('.decider').text('');
+              var star = $('<div class="starry"></div>')
+              $('.starry').fadeOut('slow');
+            }, 1500)
+          } else {
+            $(".decider").text(y.ansW);
+            $(".decider").addClass('gotItWrong');
+              setTimeout(function(){
+              $(".decider").removeClass('gotItWrong');
+              $('.decider').text('')
+            }, 1500)
+          }
         })
       }
   })
 });
 
+
+
 // timer timer timer yo
 
 playPause.on("click", function() {
+  chooseState();
   console.log("hit");
   if (playing) {
     playing = false;
     console.log("Pause!");
-    playPause.text("▶");
+    playPause.text("start");
   } else if (!playing) {
     playing = true;
     console.log("Play!");
     playPause.text("‖");
   }
-
 });
 
 reset.on("click", function() {
   console.log("reset hit");
   if (playing) {
     playing = false;
-    playPause.text("▶");
+    playPause.text("start");
   }
   console.log("Reset Timer!");
   count = countStart;

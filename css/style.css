@@ -1,37 +1,135 @@
+html {
+  background: #FF5733;
+}
 
 .timer-wrapper {
   display: block;
   float: right;
+}
 
+.prompt-box {
+  display: block;
+  margin-top: -60px;
 }
 
 .time-left {
   margin: 20px;
   font-size: 3em;
   font-family: courier;
-  margin: 0 5px 0;
+  margin: 0 0 0 60px;
 }
 
 
-.thing {
-  position: absolute;
-  top:  0;
-  left:  0;
+.random-state {
   font-size:  5vw;
-  color:  papayawhip;
+  color: papayawhip;
+  text-align: center;
+  padding-left: 20px;
+  margin-bottom: -70px;
+  font-family: courier;
+}
+
+.decider {
+  float: right;
+  padding-right: 100px;
+  font-size: 20px;
+  display: block;
+  position: relative;
+  font-family: courier;
+}
+
+.gotItRight {
+  animation: flash-text 2s;
+}
+
+@keyframes flash-text {
+  0% {
+    text-shadow: #6CDC85;
+  }
+  100% {
+    text-shadow: #6CDC85;
+  }
+}
+
+.starry {
+  color: yellow;
+  font-size: 30px;
+  position: absolute;
+  background-image: url("../img/star.png");
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  top: 0px;
+  animation:  fall 5s;
+}
+
+@keyframes fall {
+  0% {
+    top: 0%;
+  }
+  50% {
+    height: 50px;
+    width:  50px;
+  }
+  100% {
+    height: 20px;
+    width:  20px;
+    top: 110%;
+    opacity: 0.2;
+  }
+}
+
+.gotItWrong{
+  animation: shaky linear 2s;
+}
+
+@keyframes shaky{
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  10% {
+    transform:  translate(-10px,0px)  ;
+  }
+  20% {
+    transform:  translate(10px,0px)  ;
+  }
+  30% {
+    transform:  translate(-10px,0px)  ;
+  }
+  40% {
+    transform:  translate(10px,0px)  ;
+  }
+  50% {
+    transform:  translate(-10px,0px)  ;
+  }
+  60% {
+    transform:  translate(10px,0px)  ;
+  }
+  70% {
+    transform:  translate(-10px,0px)  ;
+  }
+  80% {
+    transform:  translate(10px,0px)  ;
+  }
+  90% {
+    transform:  translate(-10px,0px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
 }
 
 button {
   display: inline-block;
-  margin: 0 2px 0;
+  margin: 0 2px 0 15px;
   font-size: 2em;
   font-family: courier;
   color: white;
-  background-color: black;
-  border-radius: 50px;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
+  background-color: #000;
+  border-radius: 40px;
+  width: 110px;
+  height: 50px;
+  line-height: 40px;
   text-align: center;
   cursor: pointer;
 }
@@ -39,9 +137,13 @@ button {
 button:focus {
   outline: none;
 }
+.mapContainer {
+  display: block;
+  margin-left: 190px;
 
- Map Hover Styles
+}
 
+ /* Map Hover Styles */
 .mapContainer a {
   cursor: pointer;
 }
@@ -53,11 +155,11 @@ path, polygon {
 }
 
 .mapContainer a:hover path, .mapContainer a:focus path, .mapContainer a:active path, .mapContainer a:hover polygon, .mapContainer a:focus polygon, .mapContainer a:active polygon {
-  fill: #1A81A2;
+  fill: #33D7FF;
 }
 
 .stateHover path {
-  fill: #1A81A2;
+  fill: #33D7FF;
 }
 
 
