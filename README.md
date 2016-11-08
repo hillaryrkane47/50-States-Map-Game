@@ -10,25 +10,17 @@
 * You will also lose if the countdown clock runs out and 2 minutes are up.
 * A winner is determined if you are able to correctly select 20 states in under 2 minutes, with less than 5 wrong attempts.
 
-## Technologies Used
-
-* State Map with borders measured
-* Countown clock
-* Click event based on the state guessed 
-* Conditional to check if border selection matches the state's ID
-* Counter to track wrong attempts
-* Function to call random object (state name) from array
-
 ## MVP
 
-* Use an SVG map of the USA (state borders will be defined) 
+* Use a SVG map of the USA (state borders will be defined) 
 * Randomly display contents of array
 * Ensure SVG measurements have ID's to connect with array 
+* Conditional to check if border selection matches the state's ID
 * Collect wrong answers & correct answers with visible counter
-* Initiate countdown clock
+* Create countdown clock (will be start button for game)
 * Animations on each right or wong selection
 
-##Pseudo Code
+##Pseudo Code & Planning Phase
 
 * Connect each state to corresponding array with corresponding ID
 * Randomly display state name from array
@@ -58,9 +50,7 @@ If I were better at coding, and had more time, I would have liked to change:
 * It would have been great to have the option to either play against the clock, or play with unlimited timing but fewer wrong attempts allowed.
 * Overall, I wish I had more time to style the game and maybe add s
 
-## It just keeps going
-
-Shout outs:
+## Shout outs <3:
 
 * [Codepen](http://codepen.io/dtrane/pen/aNyaoV) for providing me with the coordinates of each state border, pixel by pixel- thank gawd. 
 * [Codepen](http://codepen.io/Xand0r/pen/Ccbwq) again for showing me how countdown clocks work! And for making me fall in love with courier again.
@@ -68,7 +58,8 @@ Shout outs:
 * Jared and Taylor who helped me with my star animations
 * Justin who makes me feel better and convinced me to go salsa dancing this Wednesday (open invite yall)
 * To Guillermo - my new roomate, who played la guitarra until 2am while I was debugging as much as possible. Gracias.
+* To my wolf-child dog Nella for providing me with the winner unicorn page background
 
 ### Tools on tools on tools
 
-[Jquery](http://jquery.com/), [Stack Overflow](http://stackoverflow.com/), [Animate CSS](https://daneden.github.io/animate.css/), [JS HINT](http://jshint.com/), , [MDN](https://developer.mozilla.org), [Trello](https://trello.com); [QuackIt](http://www.quackit.com/html/html_music_code.cfm), [YouTube](https://www.youtube.com/), [Design Shak](https://designshack.net), [Prettifier](http://jsbeautifier.org/)
+[Jquery](http://jquery.com/), [Stack Overflow](http://stackoverflow.com/), [Animate CSS](https://daneden.github.io/animate.css/), [JS HINT](http://jshint.com/), [MDN](https://developer.mozilla.org), [Trello](https://trello.com); [QuackIt](http://www.quackit.com/html/html_music_code.cfm), [YouTube](https://www.youtube.com/), [Design Shak](https://designshack.net), [Prettifier](http://jsbeautifier.org/)
