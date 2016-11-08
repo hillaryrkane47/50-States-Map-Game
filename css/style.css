@@ -1,6 +1,9 @@
 html {
     background: #FF5733;
 }
+audio {
+  float: right;
+}
 .container {
     max-width: 960px;
     margin: 0 auto;
