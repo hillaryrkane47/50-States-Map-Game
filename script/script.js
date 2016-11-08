@@ -297,10 +297,6 @@ var statesArr = [
   },
 ];
 
-var questions = {
-  questionA: 'Where is Alaska?',
-  questionB: 'Where is Alaska?',
-};
 
 var countStart = 10*2*60; // tenths * seconds * hours
 var count = countStart;
@@ -310,6 +306,21 @@ var playPause = $(".play-btn");
 var reset = $(".reset");
 var state = $('.state');
 var thing = $('.thing');
+$('.you-win').hide();
+$('.you-lose').hide();
+$('.timer-wrapper').hide();
+$('.map-container').hide();
+
+
+// // instructions
+$('.ready').on('click', function() {
+  $(".instructions").hide();
+  $('.main-container').show();
+  $('.timer-wrapper').show();
+  $('.map-container').show();
+  // $(".you-win").hide();
+  // $(".you-lose").hide();
+})
 
 //set active state when clicked
   var mapLink = $('.mapContainer a');
@@ -324,16 +335,21 @@ var thing = $('.thing');
 
 // randomly display state name
 var chooseState = function() {
-  var randomStateNum = Math.floor(Math.random() * 50)
+  var randomStateNum = Math.floor(Math.random() * statesArr.length)
+  // statesArr.splice(randomStateNum, 1)
   oneState = statesArr[randomStateNum].name;
+
     // console.log(oneState)
   $('.random-state').text(oneState);
   return oneState;
 }
 
+var wrongTracker = 0;
+var rightTracker = 0;
 
 // making sure state name is tied to state area
 state.on('click', function() {
+  // console.log("anything");
   //get me state that was clicked on
   var abbrv = $(this).data('filter');
  //go through the entire array of states objects
@@ -342,38 +358,62 @@ state.on('click', function() {
       if (abbrv === value.abbrv){
         $(this).map(function(x, y){
           var clickState = y.name;
-          console.log(clickState)
+          // console.log(clickState)
+          // console.log(oneState);
           if (clickState === oneState) {
+            // console.log("correct")
             $(".decider").text(y.ansR);
             $(".decider").addClass('gotItRight');
             function createStar(){
               var star = $('<div class="starry"></div>')
-              $('#starry_div').prepend(star);
+              $('.main-container').prepend(star);
               star.css("left", Math.random() * window.innerWidth);
             };
             for (var i=0; i<10; i++) {
               createStar();
             };
+            createStar();
             setTimeout(chooseState, 2000);
             setTimeout(function(){
               $('.decider').text('');
               var star = $('<div class="starry"></div>')
               $('.starry').fadeOut('slow');
             }, 1500)
+            rightTracker++
+            $(".right-container").text("#rightattempts = " + rightTracker);
+            if (rightTracker >= 20) {
+              $('.timer-wrapper').hide();
+              $(".you-win").show();
+              $('.main-container').hide();
+              $('.map-container').hide();
+              $('.restart').on('click', function() {
+                location.reload();
+              })
+            }
           } else {
             $(".decider").text(y.ansW);
+            wrongTracker++
+            $(".wrong-container").text("#wrongattempts = " + wrongTracker);
+            if (wrongTracker >= 5) {
+              $('.timer-wrapper').hide();
+              $(".you-lose").show();
+              $('.main-container').hide();
+              $('.map-container').hide();
+              $('.restart').on('click', function() {
+                location.reload();
+              })
+            }
             $(".decider").addClass('gotItWrong');
               setTimeout(function(){
               $(".decider").removeClass('gotItWrong');
               $('.decider').text('')
             }, 1500)
           }
+
         })
       }
   })
 });
-
-
 
 // timer timer timer yo
 
@@ -405,6 +445,8 @@ function countDown(){
     displayTime();
     if (count == 0) {
       playing = false;
+
+
     } else if (playing) {
       setTimeout(countDown, 100);
       count--;

@@ -2,6 +2,48 @@ html {
   background: #FF5733;
 }
 
+.container {
+  max-width:  960px;
+  margin:  0 auto;
+}
+
+.instructions, .you-win, .you-lose {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-image: url("../img/birch-background.jpg");
+  color: black;
+  padding: 20px;
+  /* position: fixed; */
+}
+/* .page.instructions {
+  display: block;
+  z-index: 10;
+} */
+
+
+.instructions p {
+  font-family: courier;
+  color: black;
+  font-size: 25px;
+  padding:  20px;
+  text-align: center;
+  font-weight: 700;
+}
+.instructions .ready {
+  text-align: center;
+  width: 135px;
+  margin: 0px auto;
+  display: block;
+}
+.ready:hover {
+  color: #FF5733;
+}
+
 .timer-wrapper {
   display: block;
   float: right;
@@ -9,7 +51,8 @@ html {
 
 .prompt-box {
   display: block;
-  margin-top: -60px;
+  padding:  20px;
+  font-family: courier;
 }
 
 .time-left {
@@ -21,20 +64,14 @@ html {
 
 
 .random-state {
-  font-size:  5vw;
+  font-size:  38px;
   color: papayawhip;
-  text-align: center;
-  padding-left: 20px;
-  margin-bottom: -70px;
   font-family: courier;
 }
 
 .decider {
-  float: right;
-  padding-right: 100px;
   font-size: 20px;
   display: block;
-  position: relative;
   font-family: courier;
 }
 
@@ -132,19 +169,88 @@ button {
   line-height: 40px;
   text-align: center;
   cursor: pointer;
+  border: 0;
+}
+/* .play-btn, .reset-btn {
+  display: inline-block;
+  margin: 0 2px 0 15px;
+  font-size: 2em;
+  font-family: courier;
+  color: white;
+  background-color: #000;
+  border-radius: 40px;
+  width: 110px;
+  height: 50px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  border: 0;
+
+} */
+
+.you-win {
+  background-color: purple;
+  background-image: url("../img/unicorn.png");
+  text-align: center;
+}
+
+.you-lose {
+  background-color: red;
+  background-image: url("../img/die.png");
+  text-align: center;
+}
+
+.restart {
+  text-align: center;
+  width: 160px;
+  height: 110px;
+  margin: 0px auto;
+  position: absolute;
+  top: 50%;
+  /* display: block; */
+}
+button:hover {
+  color: #FF5733;
 }
 
 button:focus {
   outline: none;
 }
-.mapContainer {
-  display: block;
-  margin-left: 190px;
 
+.map-container {
+  display: block;
+  padding: 60px 120px 120px 360px;
+}
+
+/* .prompt-box {
+
+} */
+
+.map-options-box {
+  position: absolute;
+  top:  0;
+  left:  0;
+  z-index: 11;
+  bottom: 0;
+  width:  300px;
+}
+
+.timer-wrapper {
+  position: absolute;
+  bottom:  0;
+  height: 120px;
+  left:  0;
+  right:  0;
+}
+
+.map-svg {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
 }
 
  /* Map Hover Styles */
-.mapContainer a {
+.map-container a {
   cursor: pointer;
 }
 
@@ -154,7 +260,7 @@ path, polygon {
   transition: fill .25s ease-out;
 }
 
-.mapContainer a:hover path, .mapContainer a:focus path, .mapContainer a:active path, .mapContainer a:hover polygon, .mapContainer a:focus polygon, .mapContainer a:active polygon {
+.map-container a:hover path, .map-container a:focus path, .map-container a:active path, .map-container a:hover polygon, .map-container a:focus polygon, .map-container a:active polygon {
   fill: #33D7FF;
 }
 
