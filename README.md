@@ -62,7 +62,8 @@ If I were better at coding, and had more time, I would have liked to change:
 
 Shout outs:
 
-* [Codepen](http://codepen.io/dtrane/pen/aNyaoV) for providing me with the coordinates of each state border, pixel by pixel- thank gawd.
+* [Codepen](http://codepen.io/dtrane/pen/aNyaoV) for providing me with the coordinates of each state border, pixel by pixel- thank gawd. 
+* [Codepen](http://codepen.io/Xand0r/pen/Ccbwq) again for showing me how countdown clocks work! And for making me fall in love with courier again.
 * Heidi, who helped me get out of my funk and pull objects from my crazy long array
 * Jared and Taylor who helped me with my star animations
 * Justin who makes me feel better and convinced me to go salsa dancing this Wednesday (open invite yall)
