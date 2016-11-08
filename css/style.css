@@ -171,27 +171,18 @@ button {
   cursor: pointer;
   border: 0;
 }
-/* .play-btn, .reset-btn {
-  display: inline-block;
-  margin: 0 2px 0 15px;
-  font-size: 2em;
-  font-family: courier;
-  color: white;
-  background-color: #000;
-  border-radius: 40px;
-  width: 110px;
-  height: 50px;
-  line-height: 40px;
-  text-align: center;
-  cursor: pointer;
-  border: 0;
-
-} */
 
 .you-win {
   background-color: purple;
   background-image: url("../img/unicorn.png");
   text-align: center;
+}
+.you-win h1, .you-lose h1 {
+  font-family: courier;
+  font-size: 50px;
+  position: absolute;
+  color: #33D7FF;
+  font-weight: 700;
 }
 
 .you-lose {
