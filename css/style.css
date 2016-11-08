@@ -180,9 +180,10 @@ button {
 .you-win h1, .you-lose h1 {
   font-family: courier;
   font-size: 50px;
-  position: absolute;
-  color: #33D7FF;
+  position: relative;
+  color: #19a9cc;
   font-weight: 700;
+  padding-top: 143px;
 }
 
 .you-lose {
