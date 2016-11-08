@@ -1,71 +1,64 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <title>50 statees Game</title>
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>50 statees Game</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- instructions page -->
-  <div class="instructions page">
-    <p class="container">
+    <!-- instructions page -->
+    <div class="instructions page">
+        <p class="container">
 
-    Welcome to my USA Map Game! <br /><br />
+            Welcome to my USA Map Game! <br /><br /> The object of the game is to correctly select on the map the U.S. state that will apear at random in as few guesses as possible.<br /><br />
 
-    The object of the game is to correctly select on the map the U.S. state that will apear at random in as few guesses as possible.<br /><br />
+            <strong>Directions</strong><br /><br /> The game begins when you click the "Start" button. This will initiate the countdown clock. You have 2 minutes to correctly guess 20 US States.<br /><br />
 
-    <strong>Directions</strong><br /><br />
+            <strong>Scoring</strong><br /><br /> You are allowed 5 wrong guesses. Once you reach your maximum incorrect guesses, the game is over. Additionally, if you do not identify 20 states correctly in 2 minutes or less, the game is over.<br /> I hope you have fun learning the U.S. states with this rad geography game!<br /></p>
 
-    The game begins when you click the "Start" button.  This will initiate the countdown clock.  You have 2 minutes to correctly guess 20 US States.<br /><br />
+        <button class="ready">Ready?</button>
+    </div>
+    <div class="you-win page">
+        <h1>CONGRATSSSSSS!!!</h1>
+        <button class="restart">Play again?</button>
+    </div>
+    <div class="you-lose page">
+        <h1>Sorry, you lost</h1>
+        <button class="restart">Try again?</button>
+    </div>
+    <!-- instructions end -->
 
-    <strong>Scoring</strong><br /><br />
+    <div class="main-container">
+        <!-- timer end -->
+        <!-- random state answer(yes/no)-->
 
-    You are allowed 5 wrong guesses.  Once you reach your maximum incorrect guesses, the game is over.  Additionally, if you do not identify 20 states correctly in 2 minutes or less, the game is over.<br />
+        <div class="map-options-box">
+            <div class="prompt-box">
+                <p class="random-state"></p>
+                <p class="decider"></p>
+                <!-- container for wrong/right guesses -->
+                <div class="wrong-container"></div>
+                <div class="right-container"></div>
+            </div>
+            <!-- timer -->
+            <div class="timer-wrapper">
+                <p class="time-left"></p>
+                <button class="play-btn">start</button>
+                <button class="reset">↺</button>
+            </div>
 
-    I hope you have fun learning the U.S. states with this rad geography game!<br /></p>
+        </div>
 
-    <button class="ready">Ready?</button>
-  </div>
-  <div class="you-win page">
-    <h1>CONGRATSSSSSS!!!</h1>
-    <button class="restart">Play again?</button>
-  </div>
-  <div class="you-lose page">
-    <h1>Sorry, you lost</h1>
-    <button class="restart">Try again?</button>
-  </div>
-<!-- instructions end -->
+        <!-- SVG Map borrowed from Codepen (http://codepen.io/dtrane/pen/aNyaoV) with John's permission :) -->
 
-<div class="main-container">
-<!-- timer end -->
-<!-- random state answer(yes/no)-->
-
-<div class="map-options-box">
-  <div class="prompt-box">
-    <p class="random-state"></p>
-    <p class="decider"></p>
-    <!-- container for wrong/right guesses -->
-    <div class="wrong-container"></div>
-    <div class="right-container"></div>
-  </div>
-  <!-- timer -->
-  <div class="timer-wrapper">
-      <p class="time-left"></p>
-      <button class="play-btn">start</button>
-      <button class="reset">↺</button>
-  </div>
-
-</div>
-
-  <!-- SVG Map borrowed from Codepen (http://codepen.io/dtrane/pen/aNyaoV) with John's permission :) -->
-
-    <div class="map-container">
-      <svg class="center-block map-svg" height="75%" version="1.1" viewbox="0 0 959 593" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+        <div class="map-container">
+            <svg class="center-block map-svg" height="75%" version="1.1" viewbox="0 0 959 593" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
 
       <a class="state" data-name="hawaii" data-filter=".HI">
       <path d=
