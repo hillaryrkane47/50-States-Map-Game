@@ -47,8 +47,7 @@
 * Animations on each right or wong selection
 * Keep user score with visible counter
 
-##Wireframe
-Apologies for this chicken scratch
+##Wireframe (Apologies for this chicken scratch)
 ![ScreenShot](wireframe.png)
 
 ## Project Probz and Damn I wish I...

@@ -445,6 +445,13 @@ function countDown(){
     displayTime();
     if (count == 0) {
       playing = false;
+      $('.timer-wrapper').hide();
+      $(".you-lose").show();
+      $('.main-container').hide();
+      $('.map-container').hide();
+      $('.restart').on('click', function() {
+        location.reload();
+    })
 
 
     } else if (playing) {
