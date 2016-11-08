@@ -46,8 +46,9 @@
 ## Add-ons
 * Animations on each right or wong selection
 * Keep user score with visible counter
-* Fancy affects
 
+##Wireframe
+Apologies for this chicken scratch
 ![ScreenShot](wireframe.png)
 
 ## Project Probz and Damn I wish I...
@@ -72,11 +73,4 @@ Shout outs:
 
 ### Tools on tools on tools
 
-[Jquery](http://jquery.com/), [Stack Overflow](http://stackoverflow.com/), [Animate CSS](https://daneden.github.io/animate.css/), [JS HINT](http://jshint.com/), [JS Beautify](http://jsbeautifier.org/), [MDN](https://developer.mozilla.org), [Trello](https://trello.com);
-
-
-
-A readme.md file with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc. #### Planning Phase
-Include Pseudocode Start by stating the problems in plain text. This will help you guide your process and understand the problem better.
-List your initial user stories, and state what your MVP looks like.
-Wireframe the Design of your Game (draw out sketches of what your game will look like at different stages. Planning the design ahead of time removes the burden of designing as you code)
+[Jquery](http://jquery.com/), [Stack Overflow](http://stackoverflow.com/), [Animate CSS](https://daneden.github.io/animate.css/), [JS HINT](http://jshint.com/), , [MDN](https://developer.mozilla.org), [Trello](https://trello.com); [QuackIt](http://www.quackit.com/html/html_music_code.cfm)
