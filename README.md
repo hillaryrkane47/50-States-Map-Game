@@ -65,9 +65,9 @@ Shout outs:
 * [Codepen](http://codepen.io/dtrane/pen/aNyaoV) for providing me with the coordinates of each state border, pixel by pixel- thank gawd.
 * Heidi, who helped me get out of my funk and pull objects from my crazy long array
 * Jared and Taylor who helped me with my star animations
-* Justin who makes me feel better and convinced me to go salsa dancing on Wednesday (open invite yall)
+* Justin who makes me feel better and convinced me to go salsa dancing this Wednesday (open invite yall)
 * To Guillermo - my new roomate, who played la guitarra until 2am while I was debugging as much as possible. Gracias.
 
 ### Tools on tools on tools
 
-[Jquery](http://jquery.com/), [Stack Overflow](http://stackoverflow.com/), [Animate CSS](https://daneden.github.io/animate.css/), [JS HINT](http://jshint.com/), , [MDN](https://developer.mozilla.org), [Trello](https://trello.com); [QuackIt](http://www.quackit.com/html/html_music_code.cfm)
+[Jquery](http://jquery.com/), [Stack Overflow](http://stackoverflow.com/), [Animate CSS](https://daneden.github.io/animate.css/), [JS HINT](http://jshint.com/), , [MDN](https://developer.mozilla.org), [Trello](https://trello.com); [QuackIt](http://www.quackit.com/html/html_music_code.cfm), [YouTube](https://www.youtube.com/), [Design Shak](https://designshack.net), [Prettifier](http://jsbeautifier.org/)
