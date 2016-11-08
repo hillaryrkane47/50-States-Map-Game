@@ -24,8 +24,9 @@
 * Use an SVG map of the USA (state borders will be defined) 
 * Randomly display contents of array
 * Ensure SVG measurements have ID's to connect with array 
-* Collect wrong answers & correct answers
+* Collect wrong answers & correct answers with visible counter
 * Initiate countdown clock
+* Animations on each right or wong selection
 
 ##Pseudo Code
 
@@ -43,16 +44,13 @@
 * As a visitor and non US citizen, I want to access this game so I can learn about each state within the United States.
 * As a student, I want to be able to pinpoint quickly each state, and continue to play this game to stay fresh and retain the information.
 
-## Add-ons
-* Animations on each right or wong selection
-* Keep user score with visible counter
 
-##Wireframe (Apologies for this chicken scratch)
+##Wireframe (lol)
 ![ScreenShot](wireframe.png)
 
-## Project Probz and Damn I wish I...
-If I were better at coding, and had more time (or Justin's mind), I would have liked to change:
-* Alot....
+## Darn I wish I...../Reach Goalz
+If I were better at coding, and had more time, I would have liked to change:
+* A lot...
 * I struggled with creating the random state from the list, then removing it from the list and assingning the new array to a variable.  My splice method was not functioning properly, so I had to change the win factor to if you correctly guess 20 states, rather than all 50 states.  Due to the lack of splicing, some states can be repeatedly asked. This was a last minute realization, and once I attempted the splice method - nearly all of my code broke.  
 * I really wish that I could animate each state when selected - rather than the .decider div tag (Yee Yee || Nope sorry dood.) The SVG map was new and very cool to work with but also was difficult to format.
 * I would have liked the player to be abe to enter their name at the beginning, as well as have the option to play the game with state capitals, and bonus questions specific to each state.  I think this would have made the game more challenging and engaging.
