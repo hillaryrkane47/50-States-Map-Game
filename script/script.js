@@ -268,6 +268,7 @@ $(document).ready(function() {
         $('.main-container').show();
         $('.timer-wrapper').show();
         $('.map-container').show();
+        $('.miley').get(0).play();
         // $(".you-win").hide();
         // $(".you-lose").hide();
     })
